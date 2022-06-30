@@ -16,6 +16,9 @@
 		998958B2286E38DB00B8841C /* RequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998958B1286E38DA00B8841C /* RequestRouter.swift */; };
 		998958B4286E432F00B8841C /* LoginResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998958B3286E432F00B8841C /* LoginResult.swift */; };
 		998958B6286E436B00B8841C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998958B5286E436B00B8841C /* User.swift */; };
+		998958B9286E472B00B8841C /* AuthRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998958B8286E472B00B8841C /* AuthRequestFactory.swift */; };
+		998958BB286E487700B8841C /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998958BA286E487700B8841C /* Auth.swift */; };
+		998958BD286E543000B8841C /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998958BC286E543000B8841C /* RequestFactory.swift */; };
 		99A8D96E2860E447004ECE97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A8D96D2860E447004ECE97 /* AppDelegate.swift */; };
 		99A8D9702860E447004ECE97 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A8D96F2860E447004ECE97 /* SceneDelegate.swift */; };
 		99A8D9772860E44D004ECE97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99A8D9762860E44D004ECE97 /* Assets.xcassets */; };
@@ -57,6 +60,9 @@
 		998958B1286E38DA00B8841C /* RequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRouter.swift; sourceTree = "<group>"; };
 		998958B3286E432F00B8841C /* LoginResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResult.swift; sourceTree = "<group>"; };
 		998958B5286E436B00B8841C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		998958B8286E472B00B8841C /* AuthRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequestFactory.swift; sourceTree = "<group>"; };
+		998958BA286E487700B8841C /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		998958BC286E543000B8841C /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
 		99A8D96A2860E447004ECE97 /* Online Store.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Online Store.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99A8D96D2860E447004ECE97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99A8D96F2860E447004ECE97 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +128,16 @@
 				99124A7D286E0338000E8075 /* DataRequest.swift */,
 				998958AF286E34E600B8841C /* AbstractRequestFactory.swift */,
 				998958B1286E38DA00B8841C /* RequestRouter.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		998958B7286E45CC00B8841C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				998958B8286E472B00B8841C /* AuthRequestFactory.swift */,
+				998958BA286E487700B8841C /* Auth.swift */,
+				998958BC286E543000B8841C /* RequestFactory.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -192,6 +208,7 @@
 		99A8D99E2860E9E1004ECE97 /* BusinessLogic */ = {
 			isa = PBXGroup;
 			children = (
+				998958B7286E45CC00B8841C /* Network */,
 			);
 			path = BusinessLogic;
 			sourceTree = "<group>";
@@ -492,11 +509,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				998958BD286E543000B8841C /* RequestFactory.swift in Sources */,
 				99124A7A286DFE37000E8075 /* AbstractErrorParser.swift in Sources */,
 				99124A7E286E0338000E8075 /* DataRequest.swift in Sources */,
+				998958B9286E472B00B8841C /* AuthRequestFactory.swift in Sources */,
 				998958B2286E38DB00B8841C /* RequestRouter.swift in Sources */,
 				99A8D96E2860E447004ECE97 /* AppDelegate.swift in Sources */,
 				998958B4286E432F00B8841C /* LoginResult.swift in Sources */,
+				998958BB286E487700B8841C /* Auth.swift in Sources */,
 				998958B6286E436B00B8841C /* User.swift in Sources */,
 				99A8D9702860E447004ECE97 /* SceneDelegate.swift in Sources */,
 				998958B0286E34E600B8841C /* AbstractRequestFactory.swift in Sources */,
@@ -672,10 +692,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2753KP9756;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Online Store/Info.plist";
+				INFOPLIST_FILE = "Online Store/Environments/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -701,10 +721,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2753KP9756;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Online Store/Info.plist";
+				INFOPLIST_FILE = "Online Store/Environments/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
