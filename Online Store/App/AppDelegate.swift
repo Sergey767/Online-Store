@@ -24,6 +24,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
+        let registration = requestFactory.makeRegistrationRequestFactory()
+        registration.registration(idUser: 123, userName: "Somebody", password: "mypassword", email: "some@some.ru", gender:  "m", creditCard: "9872389-2424-234224-234", bio: "This is good! I think I will switch to another language") { response in
+            switch response.result {
+            case .success(let registration):
+                print(registration)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
         return true
     }
 
